@@ -52,7 +52,7 @@ export default function ExploreScreen() {
 
   if (loading) {
     return (
-      <View style={[styles.loadingContainer, { backgroundColor: isDark ? "#000" : "#fff" }]}>
+      <View style={[styles.loadingContainer, { backgroundColor: isDark ? "#0d0d0d" : "#fdfdfd" }]}>
         <ActivityIndicator size="large" color={isDark ? "#fff" : "#000"} />
         <Text style={{ color: isDark ? "#fff" : "#000", marginTop: 10 }}>
           Carregando fatos de gatos...
@@ -62,7 +62,7 @@ export default function ExploreScreen() {
   }
 
   return (
-    <View style={[styles.container, { backgroundColor: isDark ? "#000" : "#fff" }]}>
+    <View style={[styles.container, { backgroundColor: isDark ? "#0d0d0d" : "#fdfdfd" }]}>
       <Text style={[styles.title, { color: isDark ? "#fff" : "#000" }]}>
         Cat Facts 🐱
       </Text>
@@ -75,18 +75,19 @@ export default function ExploreScreen() {
             style={[
               styles.card,
               {
-                backgroundColor: isDark ? "#1a1a1a" : "#f2f2f2",
-                borderColor: isDark ? "#333" : "#ddd",
+                backgroundColor: isDark ? "#1a1a1a" : "#ffffff",
+                borderColor: isDark ? "#333" : "rgba(0,0,0,0.08)",
+                shadowOpacity: isDark ? 0 : 0.08,
               },
             ]}
           >
-            <Text style={{ color: isDark ? "#fff" : "#000", fontSize: 16 }}>
+            <Text style={{ color: isDark ? "#fff" : "#222", fontSize: 16, lineHeight: 22 }}>
               {item}
             </Text>
           </View>
         )}
         onEndReached={loadMore}
-        onEndReachedThreshold={0.2}
+        onEndReachedThreshold={0.25}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -109,16 +110,20 @@ const styles = StyleSheet.create({
     paddingTop: 40,
   },
   title: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: "700",
     marginBottom: 20,
     textAlign: "center",
   },
   card: {
-    padding: 16,
-    marginBottom: 12,
-    borderRadius: 12,
+    padding: 18,
+    marginBottom: 14,
+    borderRadius: 16,
     borderWidth: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 3 },
+    shadowRadius: 6,
+    elevation: 3,
   },
   loadingContainer: {
     flex: 1,
