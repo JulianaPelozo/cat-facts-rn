@@ -1,3 +1,5 @@
+#Bem vindo ao repositório Cat Facts App!
+
 🐈 Cat Facts App
 
 Bem-vindo ao Cat Facts App! Este é um aplicativo móvel simples, construído com React Native e Expo, que fornece fatos aleatórios e interessantes sobre gatos, utilizando a API Cat Facts.
