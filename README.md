@@ -6,7 +6,8 @@ Bem-vindo ao Cat Facts App! Este é um aplicativo móvel simples, construído co
 
 O projeto utiliza o Expo Router para uma navegação baseada em arquivos, tornando a gestão de rotas simples e intuitiva.
 
-![gato](image.png)
+<p align="center">
+<img src="image.png" alt="GIF de Gato Fofo" width="400"/>
 
 ✨ Funcionalidades
 
