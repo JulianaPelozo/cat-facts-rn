@@ -6,7 +6,7 @@ export default function ModalScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Modal aberto! 🎉</Text>
+      <Text style={styles.title}>Modal aberto!</Text>
       <Text style={styles.text}>
         Este é o modal padrão do Expo Router. Você pode personalizar ou
         remover como quiser.
